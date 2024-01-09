@@ -1,0 +1,103 @@
+.containerInfos{
+    width: 70%;
+    margin-left: 15%;
+
+}
+.infosCapaTitulo{
+    font-size: x-large;
+    padding-bottom: 2%;
+    font-weight: bold;
+}
+.infosCapaSecoes{
+    font-size: small;
+    padding-bottom: 4%;
+    padding-top: 4%;
+}
+
+.infosCapaParceiros{
+    font-size: medium;
+}
+
+
+
+.capa-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de transparência */
+  }
+  
+  .capaInformacoes {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 20% 10%;
+  }
+
+  .conteudo-informacoes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Coloca o .conteudo-informacoes acima da sobreposição */
+    text-align: center;
+    color: white;
+    text-align: left;
+    width: 70%;
+
+  }
+  
+
+.infoContainerInfo{
+    width: 100%;
+    font-size: medium;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.creditos-container {
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .credito-item {
+    text-align: center;
+  }
+  
+  .credito-item img {
+    width: 100px; 
+    height: auto;
+  }
+
+  .iconeInfos{
+    width: 3%;
+  }
+
+  .infoCardInfo{
+    font-size: medium;
+  }
+
+  .informacoesCurso{
+    text-align: justify;
+  }
+
+h2{
+    text-align: center;
+    color: #F6303F;
+    font-weight: bold;
+}
+
+h3{
+    font-weight: bold;
+}

@@ -1,0 +1,80 @@
+.containerTransparencia{
+    margin-top: 6%;
+    margin-left: 15%;
+    width: 70%;
+}
+
+.fundoDadosGerais{
+    background-color: #F5F5F7;
+    border-radius: 20px;
+    padding-top: 0.5%;
+    padding-bottom: 1%;
+}
+
+.containerDadosGerais{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.blocoDadosGerais{
+    width: 25%;
+}
+
+.tituloBlocos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #2F2E41;
+    font-weight: bold;
+}
+
+
+.iconeDados{
+    width: 8%;
+}
+
+.formatarDado{
+    color: #D2202C;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.usuarioCurso{
+    width: 50%;
+    background-color: #F5F5F7;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    color: #2F2E41;
+    font-weight:bolder;
+
+}
+.grafico{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.legendaCurso{
+    display: flex;
+    align-items: center;
+    padding-top: 2%;
+    font-size: small;
+}
+
+.usuarioEstado{
+    width: 50%;
+}
+
+.containerInferior{
+    display: flex;
+}
+
+
+p{
+    font-size: small;
+}
+
+h3{
+    color: #D2202C
+}

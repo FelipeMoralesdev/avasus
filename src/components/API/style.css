@@ -1,0 +1,87 @@
+.listaCursos{
+    list-style-type: none;
+    border-radius: 20px;
+    background: #F5F5F7;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+ul{
+    padding-inline-start: 0;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+}
+
+.titulo{
+    text-align: left;
+}
+
+.parceiros{
+    color: #F6303F;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    text-align: left;
+}
+
+.icone{
+    width: 2%;
+    height: 2%;
+}
+
+.estrela::before {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    font-weight: bolder;
+    content: '\2605'; 
+    color: #ddd; 
+    
+  }
+
+  
+  .preenchida::before {
+    color: #F6303F; 
+  }
+  
+  .meia-preenchida::before {
+    content: '\2605';
+    color: #F6303F; 
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    font-weight: bolder;
+    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%); 
+  }
+  
+
+  .container-estrelas {
+    display: flex; 
+  }
+  
+
+  
+.modulo{
+    border-radius: 20px;
+    border: 1px solid #707070;
+    background: #707070;
+    padding-left: 1%;
+    padding-right: 1%;
+    color: azure;
+}
+
+.img-quadrada {
+    width: 10%; 
+    object-fit: cover; 
+    border-radius: 20%; 
+  }

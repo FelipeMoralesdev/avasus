@@ -1,0 +1,64 @@
+.containerModulos{
+    margin-top: 6%;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 3%;
+}
+
+.cabecalho{
+    font-size: smaller;
+    text-align: left;
+
+}
+
+.cardCursos{
+    width: 30%;
+}
+
+.capaCard{
+    border-radius: 10%;
+    width: 100%;
+}
+
+.containerCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.resultados{
+    text-align: left;
+}
+
+.tituloCard{
+    text-align: left;
+}
+
+.parceirosCard{
+    font-size: x-small;
+    text-align: left;
+    color: #F6303F;
+    font-weight: bold;
+}
+
+.iconeCard{
+    width: 5%;
+    height: 5%;
+}
+
+.resumoCard{
+    font-size: small;
+    text-align: left;
+    margin-bottom: 1%;
+}
+
+.infoCard{
+    font-size: x-small;
+}
+
+.infoContainer{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+

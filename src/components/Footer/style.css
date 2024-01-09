@@ -1,0 +1,53 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .faixa {
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .vermelha {
+    background: #d2202c;
+    padding-bottom: 2%;
+}
+
+  .cinza {
+    background: #323237;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  
+  .bloco {
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cinza-claro {
+    background: #424146;
+    display: flex;
+  }
+  
+.logos{
+    width: 30%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.logoMenor{
+    margin-top: 4%;
+    width: 30%;
+}
