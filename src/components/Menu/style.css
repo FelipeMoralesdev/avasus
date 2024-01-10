@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 1%;
+    padding-top: 1.5%;
     padding-bottom: 1%;
     width: 100%;
     position: fixed;
@@ -10,15 +10,37 @@
     left: 0;
     z-index: 1000;
     background-color: #fff;
+
   }
 
 .palavras{
     display: flex;
     justify-content: space-around;
     width: 40%;
+    color: #2F2E41;
+    font-weight: 600;
+    font-size: medium;
+    line-height: normal;
 }
 
 .button{
     margin-left: 5px;
+}
+
+.avasusMenuImage{
+    width: 80%;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.link:visited{
+    color: #2F2E41
+}
+
+.current-page{
+    color: #707070;
+    text-decoration: none
 }
 

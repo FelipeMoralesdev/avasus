@@ -85,3 +85,21 @@ ul{
     object-fit: cover; 
     border-radius: 20%; 
   }
+
+  .classificacoes{
+    display: flex;
+    width: 100%;
+    color: #2F2E41;
+    font-weight: 600;
+    
+}
+
+.cla{
+  margin-left: 1%;
+  
+}
+
+.selecionado{
+  
+  border-bottom: 1px solid #2F2E41;
+}

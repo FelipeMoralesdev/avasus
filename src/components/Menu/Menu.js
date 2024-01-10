@@ -1,20 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import avasusMenuImage from '../../images/avasusMenu.png';
 import './style.css';
 
 const Menu = () => {
+    const location = useLocation();
+
   return (
     <div className="group626221">
         <div>
-            <img src={avasusMenuImage} alt="Avasus Menu" />
+            <img className='avasusMenuImage' src={avasusMenuImage} alt="Avasus Menu" />
         </div>
         <div className='palavras'>
-            <div><Link to="/">Início</Link></div>
+            <div><Link to="/" className={location.pathname === '/' ? 'current-page' : 'link'}>Início</Link></div>
             <div>Sobre Nós</div>
-            <div><Link to="/cursos">Cursos</Link></div>
-            <div><Link to="/parceiros">Parceiros</Link></div>
-            <div><Link to="/transparencia">Transparência</Link></div>
+            <div><Link to="/cursos" className={location.pathname === '/cursos' ? 'current-page' : 'link'}>Cursos</Link></div>
+            <div><Link to="/parceiros" className={location.pathname === '/parceiros' ? 'current-page' : 'link'}>Parceiros</Link></div>
+            <div><Link to="/transparencia" className={location.pathname === '/transparencia' ? 'current-page' : 'link'}>Transparência</Link></div>
             <div>Contato</div>
         </div>
         <div>

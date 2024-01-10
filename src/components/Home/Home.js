@@ -18,11 +18,6 @@ const Home = () => {
       </div>
       <div className='modulosEducacionais'>
         <h1>Módulos Educacionais</h1>
-        <div className='classificacoes'>
-          <div className='cla'>Mais Populares</div>
-          <div className='cla'>Mais bem avaliados</div>
-          <div className='cla'>Mais recentes</div>
-        </div>
         <MinhaApp/>
         <div className='retangulo'>Ver mais</div>
       </div>
