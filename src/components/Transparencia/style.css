@@ -1,5 +1,4 @@
 .containerTransparencia{
-    margin-top: 6%;
     margin-left: 15%;
     width: 70%;
 }
@@ -9,6 +8,8 @@
     border-radius: 20px;
     padding-top: 0.5%;
     padding-bottom: 1%;
+    padding: 2%;
+
 }
 
 .containerDadosGerais{
@@ -20,20 +21,26 @@
 
 .blocoDadosGerais{
     width: 25%;
+    margin-top: 1%;
 }
+
+
 
 .tituloBlocos{
     display: flex;
-    justify-content: space-around;
+    justify-content:center ;
     align-items: center;
     color: #2F2E41;
     font-weight: bold;
+    font-size: x-small;
 }
 
 
 .iconeDados{
     width: 8%;
+    margin-right: 2%;
 }
+
 
 .formatarDado{
     color: #D2202C;
@@ -42,32 +49,44 @@
 }
 
 .usuarioCurso{
-    width: 50%;
+    width: 49%;
     background-color: #F5F5F7;
     border-radius: 20px;
-    margin-bottom: 5%;
     color: #2F2E41;
     font-weight:bolder;
-
+    padding-top: 2%;
 }
+
 .grafico{
     width: 70%;
     margin-left: 15%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    
+    
 }
 
 .legendaCurso{
     display: flex;
     align-items: center;
-    padding-top: 2%;
-    font-size: small;
+    padding-top: 10%;
+    font-size: smaller;
 }
 
 .usuarioEstado{
-    width: 50%;
+    width: 49%;
+    color: #2F2E41;
+    background-color: #F5F5F7 ;
+    border-radius: 20px;
+    padding-top: 2%;
+    
 }
 
 .containerInferior{
     display: flex;
+    margin-top: 3%;
+    justify-content: space-around;
+    margin-bottom: 3%;
 }
 
 
@@ -78,3 +97,35 @@ p{
 h3{
     color: #D2202C
 }
+
+@media screen and (max-width: 768px) {
+    .containerTransparencia{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .iconeDados{
+        width: 15%;
+    }
+
+    .blocoDadosGerais{
+        width: 30%;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+   .containerInferior{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+   }
+
+   .usuarioCurso{
+    width: 100%;
+    align-items: center;
+   }
+
+   .usuarioEstado{
+    width: 100%;
+   }
+  }

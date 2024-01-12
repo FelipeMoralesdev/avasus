@@ -40,6 +40,10 @@ const Mapa = () => {
       Highcharts.mapChart('container', {
         chart: {
           map: mapData.map,
+          backgroundColor: '#F5F5F7',
+          borderRadius: '20px',
+  
+
         },
         title: {
           text: '',

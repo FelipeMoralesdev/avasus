@@ -69,7 +69,7 @@ const Parceiros = () => {
       <div>
         <span>Página {paginaAtual} de {calcularNumeroDePaginas()}{' '}</span>
         {Array.from({ length: calcularNumeroDePaginas() }).map((_, index) => (
-          <button key={index} onClick={() => handleTrocarPagina(index + 1)}>
+          <button key={index} onClick={() => handleTrocarPagina(index + 1)} className='bttnPag'>
             {index + 1}
           </button>
         ))}

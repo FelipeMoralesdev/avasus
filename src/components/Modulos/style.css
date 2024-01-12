@@ -1,5 +1,8 @@
+ul{
+    padding-left: 0% !important;
+}
+
 .containerModulos{
-    margin-top: 6%;
     width: 70%;
     margin-left: 15%;
     margin-bottom: 3%;
@@ -10,6 +13,8 @@
     text-align: left;
 
 }
+
+
 
 .cardCursos{
     width: 30%;
@@ -62,3 +67,35 @@
     justify-content: space-around;
 }
 
+.bttnModulos{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.bttnPag{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .containerModulos{
+        width: 90%;
+        margin-left: 5%;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .containerCard {
+        flex-direction: column;
+    }
+
+    .cardCursos{
+        width: 100%;
+    }
+
+    .containerCategorias{
+        font-size: small;
+    }
+  }

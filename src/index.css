@@ -9,3 +9,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1, h2, h3, h4{
+  color: #D2202C !important;
+}
+
+h1{
+  font-size: x-large !important;
+}
+
+h3{
+  font-size: larger !important;
+}

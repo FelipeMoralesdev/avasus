@@ -17,6 +17,7 @@
   .vermelha {
     background: #d2202c;
     padding-bottom: 2%;
+    padding-top: 1%;
 }
 
   .cinza {
@@ -25,11 +26,28 @@
     justify-content: space-around;
     align-items: flex-start;
     flex-direction: row;
+    padding-top: 2%;
+    padding-bottom: 1%;
   }
   
   .bloco {
-    text-align: center;
+    text-align: left;
   }
+
+  .redesSociais{
+    width: 100%;
+  }
+
+  .blocoRedes{
+    width: 20%;
+    margin-top: -5px;
+  }
+
+  .logoSociais{
+    margin: 0.5%;
+    margin-left: 5%;
+  }
+
   
   ul {
     list-style-type: none;
@@ -39,15 +57,34 @@
   .cinza-claro {
     background: #424146;
     display: flex;
+    color: #FFF;
+    padding-top: 1%;
   }
   
 .logos{
-    width: 30%;
+    width: 40%;
     padding-left: 4%;
     padding-right: 4%;
 }
 
 .logoMenor{
-    margin-top: 4%;
-    width: 30%;
+    width: 35%;
+}
+
+.laisFaixaCinza{
+  width: 60%;
+}
+
+@media screen and (max-width: 375px) {
+
+  .redesSociais{
+    width: 10%;
+    height: 100%;
+  }
+
+  .logoSociais{
+    margin-bottom: 10%;
+  }
+
+
 }

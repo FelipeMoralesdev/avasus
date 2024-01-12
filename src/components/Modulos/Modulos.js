@@ -100,13 +100,13 @@ const Modulos = () => {
     <div className='containerModulos'>
         <div className='cabecalho'>Início / Cursos / Módulos </div>
         <h1>Módulos Educacionais</h1>
-        <div>
+        <div className='containerCategorias'>
             {categorias.map((categoria, index) => (
-            <button key={index} onClick={() => setCategoriaSelecionada(categoria)}>
+            <button key={index} onClick={() => setCategoriaSelecionada(categoria)} className='bttnModulos'>
                 {categoria}
             </button>
             ))}
-            <button onClick={() => setCategoriaSelecionada('')}>Todas as Categorias</button>
+            <button onClick={() => setCategoriaSelecionada('')} className='bttnModulos'>Todas as Categorias</button>
         </div>
         <div className='resultados'>
             <span>{obterCursosDaPaginaAtual().length} de {filtrarCursosPorCategoria().length} resultados</span>
@@ -140,7 +140,7 @@ const Modulos = () => {
     <div>
         <span>Página {paginaAtual} de {calcularNumeroDePaginas()}</span>
         {Array.from({ length: calcularNumeroDePaginas() }).map((_, index) => (
-          <button key={index} onClick={() => handleTrocarPagina(index + 1)}>
+          <button key={index} onClick={() => handleTrocarPagina(index + 1)} className='bttnPag'>
             {index + 1}
           </button>
         ))}

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './style.css'
 import iconeUsuarios from '../../images/iconeUsuarios.png'
 import iconeTempo from '../../images/iconeTempo.png'
+import { Link } from 'react-router-dom';
+
 
 const renderizarEstrelas = (nota) => {
     const estrelas = [];
@@ -85,28 +87,38 @@ const MinhaApp = () => {
     };
 
   return (
-    <div className='container'>
+    <div className='containerAPI'>
       <div className='classificacoes'>
-        <div className={`cla ${opcaoClassificacao === 'populares' ? 'selecionado' : 'cla'}`} onClick={() => handleClassificacaoChange('populares')}>Mais Populares</div>
-        <div className={`cla ${opcaoClassificacao === 'avaliados' ? 'selecionado' : 'cla'}`} onClick={() => handleClassificacaoChange('avaliados')}> Mais bem avaliados </div>
-        <div className={`cla ${opcaoClassificacao === 'recentes' ? 'selecionado' : 'cla'}`} onClick={() => handleClassificacaoChange('recentes')}> Mais recentes </div>
+        <div className={`cla ${opcaoClassificacao === 'populares' ? 'selecionado' : 'naoSelecionado'}`} onClick={() => handleClassificacaoChange('populares')}>Mais Populares</div>
+        <div className={`cla ${opcaoClassificacao === 'avaliados' ? 'selecionado' : 'naoSelecionado'}`} onClick={() => handleClassificacaoChange('avaliados')}> Mais bem avaliados </div>
+        <div className={`cla ${opcaoClassificacao === 'recentes' ? 'selecionado' : 'naoSelecionado'}`} onClick={() => handleClassificacaoChange('recentes')}> Mais recentes </div>
       </div>
       <ul>
             {cursos.map(curso => (
               <li className='listaCursos' key={curso.id}>
+             
                 <img className='img-quadrada' src={curso.capa} alt={`Capa do curso ${curso.titulo}`}  />
                 <div className='infos'>
                     <div className='titulo'>{curso.titulo}{' '}</div>
                     <div className='parceiros'>{curso.parceiros}{' '}</div>
                 </div>
-                <img src={iconeUsuarios} alt={'Icone Usuario'} className='icone' />
-                {Number(curso.matriculados).toLocaleString()}{' '}
-                <img src={iconeTempo} alt={'Icone Tempo'} className='icone' />
-                {curso.duracao}{' '}
-                {renderizarEstrelas(curso.avaliacao)}
-                {curso.avaliacao.toString().replace('.', ',')}{' '}
-                <div className='modulo'>Ver módulo</div>
-
+                <div>
+                  <img src={iconeUsuarios} alt={'Icone Usuario'} className='iconeUsuario' />
+                  {Number(curso.matriculados).toLocaleString()}{' '}
+                </div>
+                <div>
+                  <img src={iconeTempo} alt={'Icone Tempo'} className='icone' />
+                  {curso.duracao}{' '}
+                </div>
+                <div className='containerInfoEstrelas'>
+                  {renderizarEstrelas(curso.avaliacao)}
+                  {curso.avaliacao.toString().replace('.', ',')}{' '}
+                </div>
+                <Link to={`/curso/${curso.id}`} className='linkModulo'>
+                  <div className='moduloAPI'>Ver módulo</div>
+                </Link>
+                
+             
               </li>
             ))}
       </ul>

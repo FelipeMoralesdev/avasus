@@ -44,29 +44,20 @@ const Transparencia = () => {
           <div className="fundoDadosGerais">
             <h3>Dados Gerais</h3>
             <div className="containerDadosGerais">
-              <div className="blocoDadosGerais">
-                <div className="tituloBlocos">
-                  <img
-                    className="iconeDados"
-                    src={iconeUsuarios}
-                    alt={"Icone Usuario"}
-                  />
-                  <p>Total de usuários registrados:</p>
-                </div>
-                <div className="formatarDado">
-                  {Number(dadosTransparencia.transparecia.dados_gerais.usuarios_registrados
-                  ).toLocaleString()}
-                </div>
-              </div>
 
               <div className="blocoDadosGerais">
                 <div className="tituloBlocos">
-                  <img
-                    className="iconeDados"
-                    src={iconeInscricoes}
-                    alt={"Icone Usuario"}
-                  />
-                  <p>Inscrições realizadas:</p>
+                  <img className="iconeDados" src={iconeUsuarios} alt={"Icone Usuario"}/>
+                  <div className="formatarTitulo">Total de usuários registrados:</div>
+                </div>
+                  <div className="formatarDado">{Number(dadosTransparencia.transparecia.dados_gerais.usuarios_registrados).toLocaleString()}
+                </div>
+               </div>
+
+              <div className="blocoDadosGerais">
+                <div className="tituloBlocos">
+                  <img className="iconeDados" src={iconeInscricoes} alt={"Icone Usuario"}/>
+                  <div className="formatarTitulo">Inscrições realizadas:</div>
                 </div>
                 <div className="formatarDado">
                   {Number(dadosTransparencia.transparecia.dados_gerais.incricoes_realizadas).toLocaleString()}
@@ -75,12 +66,8 @@ const Transparencia = () => {
 
               <div className="blocoDadosGerais">
                 <div className="tituloBlocos">
-                  <img
-                    className="iconeDados"
-                    src={iconeCursos}
-                    alt={"Icone Usuario"}
-                  />
-                  <p>Cursos ativos:</p>
+                  <img className="iconeDados" src={iconeCursos} alt={"Icone Usuario"} />
+                  <div className="formatarTitulo">Cursos ativos:</div>
                 </div>
                 <div className="formatarDado">
                   {Number(dadosTransparencia.transparecia.dados_gerais.cursos_ativos).toLocaleString()}
@@ -89,12 +76,8 @@ const Transparencia = () => {
 
               <div className="blocoDadosGerais">
                 <div className="tituloBlocos">
-                  <img
-                    className="iconeDados"
-                    src={iconeCertificados}
-                    alt={"Icone Usuario"}
-                  />
-                  <p>Direito à Certificação:</p>
+                  <img className="iconeDados" src={iconeCertificados} alt={"Icone Usuario"} />
+                  <div className="formatarTitulo">Direito à Certificação:</div>
                 </div>
                 <div className="formatarDado">
                   {Number(dadosTransparencia.transparecia.dados_gerais.direito_certificacao).toLocaleString()}
@@ -103,12 +86,8 @@ const Transparencia = () => {
 
               <div className="blocoDadosGerais">
                 <div className="tituloBlocos">
-                  <img
-                    className="iconeDados"
-                    src={iconeInvestimentoCurso}
-                    alt={"Icone Usuario"}
-                  />
-                  <p>Investimento médio por curso:</p>
+                  <img className="iconeDados" src={iconeInvestimentoCurso} alt={"Icone Usuario"} />
+                  <div className="formatarTitulo">Investimento médio por curso:</div>
                 </div>
                 <div className="formatarDado">
                   {dadosTransparencia.transparecia.dados_gerais.investimento_medio_curso}
@@ -117,27 +96,23 @@ const Transparencia = () => {
 
               <div className="blocoDadosGerais">
                 <div className="tituloBlocos">
-                  <img
-                    className="iconeDados"
-                    src={iconeInvestimentoAluno}
-                    alt={"Icone Usuario"}
-                  />
-                  <p>Investimento médio por aluno:</p>
+                  <img className="iconeDados" src={iconeInvestimentoAluno} alt={"Icone Usuario"} />
+                  <div className="formatarTitulo">Investimento médio por aluno:</div>
                 </div>
                 <div className="formatarDado">
-                  {
-                    dadosTransparencia.transparecia.dados_gerais
-                      .investimento_medio_aluno
-                  }
+                  {dadosTransparencia.transparecia.dados_gerais.investimento_medio_aluno}
                 </div>
               </div>
+
+
             </div>
           </div>
+
           <div className="containerInferior">
             <div className="usuarioCurso">
-                <h2>Usuários por Curso</h2>
+                <h3>Usuários por Curso</h3>
                 <div className="grafico">
-                    <Grafico />
+                    <Grafico/>
                 </div>
                 
                 {dadosTransparencia.transparecia.usuarios_por_curso.map((curso, index) => (
@@ -148,8 +123,8 @@ const Transparencia = () => {
                         height: '15px',
                         borderRadius: '50%',
                         backgroundColor: cores[index % cores.length],
-                        marginRight: '5%',
-                        marginLeft: '10%',
+                        marginRight: '3%',
+                        marginLeft: '5%',
                         border: '1px solid black'
                     }}
                     ></div>
@@ -158,7 +133,7 @@ const Transparencia = () => {
             ))}
             </div>
             <div className="usuarioEstado">
-                    <h2>Usuários por Estado</h2>
+                    <h3>Usuários por Estado</h3>
                     <Mapa/>
             </div>
         </div>

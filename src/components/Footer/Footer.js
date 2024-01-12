@@ -2,7 +2,9 @@ import React from 'react';
 import './style.css';
 import logo1 from '../../images/Layer 1.png'; 
 import logo2 from '../../images/Camada 2.png'; 
-import redesSociais from '../../images/Social.png'; 
+import social1 from '../../images/Social (1).png';
+import social2 from '../../images/Social (2).png';
+import social3 from '../../images/Social (3).png';
 
 const Footer = () => {
   return (
@@ -18,23 +20,27 @@ const Footer = () => {
       <div className="faixa cinza">
         <div className="bloco">
           <img className='logoMenor' src={logo1} alt="Logo Laboratório" />
-          <p>Laboratório de Inovação Tecnológica em Saúde</p>
+          <p className='laisFaixaCinza'>Laboratório de Inovação Tecnológica em Saúde</p>
         </div>
 
         <div className="bloco">
-          <p>Links Úteis</p>
-          <ul>
-            <li>Início</li>
-            <li>Sobre Nós</li>
-            <li>Módulos</li>
-            <li>Parceiros</li>
-            <li>Transparência</li>
-          </ul>
+          <h6>Links Úteis</h6>
+
+            <div>Início</div>
+            <div>Sobre Nós</div>
+            <div>Módulos</div>
+            <div>Parceiros</div>
+            <div>Transparência</div>
+
         </div>
 
-        <div className="bloco">
-          <p>Redes Sociais</p>
-          <img src={redesSociais} alt="Redes Sociais" />
+        <div className="blocoRedes">
+          <h7>Redes Sociais</h7>
+          <div className="redesSociais">
+            <img src={social1} alt="Redes Sociais" className='logoSociais'/>
+            <img src={social2} alt="Redes Sociais" className='logoSociais'/>
+            <img src={social3} alt="Redes Sociais" className='logoSociais'/>
+          </div>
         </div>
       </div>
 

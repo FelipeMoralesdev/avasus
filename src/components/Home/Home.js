@@ -8,7 +8,7 @@ import MinhaApp from '../API/api';
 const Home = () => {
 
   return (
-    <div className='container'>
+    <div className='containerHome'>
       <div className='destaques'>
         <div className = 'overlayDestaque'/>
         <div className='containerImage'>
