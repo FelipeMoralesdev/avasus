@@ -6,6 +6,10 @@ h1{
     line-height: normal;
 }
 
+.containerHome{
+    margin-top: 61px;
+}
+
 .destaques{
     position: relative;
     display: inline-block;

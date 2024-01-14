@@ -5,6 +5,7 @@ import logo2 from '../../images/Camada 2.png';
 import social1 from '../../images/Social (1).png';
 import social2 from '../../images/Social (2).png';
 import social3 from '../../images/Social (3).png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -25,21 +26,34 @@ const Footer = () => {
 
         <div className="blocoLinks">
           <div className='titulo1'>Links Úteis</div>
-
+          <Link to={`/`} className='linkModulo'>
             <div>Início</div>
+          </Link>
             <div>Sobre Nós</div>
+          <Link to={`/cursos`} className='linkModulo'>
             <div>Módulos</div>
+          </Link>
+          <Link to={`/parceiros`} className='linkModulo'>
             <div>Parceiros</div>
+          </Link>
+          <Link to={`/transparencia`} className='linkModulo'>
             <div>Transparência</div>
+          </Link>
 
         </div>
 
         <div className="blocoRedes">
           <div className='titulo2'>Redes Sociais</div>
           <div className="redesSociais">
-            <img src={social1} alt="Redes Sociais" className='logoSociais f'/>
-            <img src={social2} alt="Redes Sociais" className='logoSociais'/>
-            <img src={social3} alt="Redes Sociais" className='logoSociais'/>
+            <a href='https://www.facebook.com/LAIS.HUOL/' target='_blank' rel='noopener noreferrer'>
+              <img src={social1} alt="Redes Sociais" className='logoSociais f'/>
+            </a>
+            <a href='https://www.instagram.com/laishuol/' target='_blank' rel='noopener noreferrer'>
+              <img src={social2} alt="Redes Sociais" className='logoSociais'/>
+            </a>
+            <a href='https://twitter.com/laishuol' target='_blank' rel='noopener noreferrer'>
+              <img src={social3} alt="Redes Sociais" className='logoSociais'/>
+            </a>
           </div>
         </div>
       </div>

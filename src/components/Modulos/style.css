@@ -1,11 +1,14 @@
 ul{
     padding-left: 0% !important;
 }
-
+.capa-container{
+    margin-top: 62px;
+}
 .containerModulos{
     width: 70%;
     margin-left: 15%;
     margin-bottom: 3%;
+    margin-top: 70px;
 }
 
 .cabecalho{
