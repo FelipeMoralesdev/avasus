@@ -47,9 +47,9 @@ const Parceiros = () => {
 
   return (
     <div className='containerParceiros'>
-      <div className='cabecalho'>Início / Parceiros </div>
+      <div className='cabecalhoParceiros'>Início <b>/ Parceiros</b> </div>
       <h1 className='tituloParceiros'>Nossos parceiros</h1>
-      <div className='resultados'>
+      <div className='resultadosParceiros'>
         <span>{obterParceirosDaPaginaAtual().length} de {parceiros.length} resultados</span>
       </div>
       <div >
@@ -66,13 +66,59 @@ const Parceiros = () => {
           ))}
         </ul>
       </div>
-      <div>
-        <span>Página {paginaAtual} de {calcularNumeroDePaginas()}{' '}</span>
-        {Array.from({ length: calcularNumeroDePaginas() }).map((_, index) => (
-          <button key={index} onClick={() => handleTrocarPagina(index + 1)} className='bttnPag'>
-            {index + 1}
-          </button>
-        ))}
+      <div className='botoes'>
+      {Array.from({ length: calcularNumeroDePaginas() }).map((_, index) => {
+        const pagina = index + 1;
+        
+        if (pagina === 1) {
+          return (
+            <button key={index} onClick={() => handleTrocarPagina(pagina)}  className={`bttnPag ${pagina === paginaAtual ? 'paginaAtual' : ''} primeiroBotao`}>
+              {pagina}
+            </button>
+          );
+        }
+
+        if (pagina === paginaAtual - 2) {
+          return (
+            <button key={`ellipsis-before-${pagina}`} className={`bttnPag ${pagina === paginaAtual ? 'paginaAtual' : ''}`}>
+              {"..."}
+            </button>
+          );
+        }
+
+        if (pagina >= paginaAtual - 1 && pagina <= paginaAtual + 1) {
+          return (
+            <button key={index} onClick={() => handleTrocarPagina(pagina)} className={`bttnPag ${pagina === paginaAtual ? 'paginaAtual' : ''}`}>
+              {pagina}
+            </button>
+          );
+        }
+
+        if (pagina === paginaAtual + 2) {
+          return (
+            <button key={`ellipsis-after-${pagina}`} className={`bttnPag ${pagina === paginaAtual ? 'paginaAtual' : ''}`}>
+              {"..."}
+            </button>
+          );
+        }
+
+        if (pagina === calcularNumeroDePaginas()) {
+          return (
+            <button key={index} onClick={() => handleTrocarPagina(calcularNumeroDePaginas())} className={`bttnPag ${pagina === paginaAtual ? 'paginaAtual' : ''}`}>
+              {calcularNumeroDePaginas()}
+            </button>
+          );
+        }
+
+        return null;
+      })}
+
+
+      {paginaAtual < calcularNumeroDePaginas() && (
+    <button onClick={() => handleTrocarPagina(paginaAtual + 1)} className='bttnPag ultimoBotao'>
+      {'Próximo >'}
+    </button>
+  )}
       </div>
     </div>
   );

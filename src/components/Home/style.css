@@ -46,28 +46,60 @@ h1{
     position: relative;
 }
 
+.setaEsquerda, .setaDireita, .barra {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3; 
+    max-width: 7%; 
+    max-height: 7%;
+  }
+  
+  .setaEsquerda {
+    left: 20px; 
+  }
+  
+  .setaDireita {
+    right: 20px; 
+  }
+  
+  .barra {
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    top: 90%;
+    width: 70%;
+  }
+
 .modulosEducacionais{
     width: 70%;
-    margin-top: 2%;
+    margin-top: 5%;
 
 }
 
 .retangulo{
-    border-radius: 10px;
     background: #707070;  
-    width: 20%; 
-    margin-left: 40%;
+    width: 30%; 
+    padding-right: 7%;
+    padding-left: 7%;
     color: azure;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    margin-bottom: 5%;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 4%;
+
 }
 
 .containerParceirosHome{
     width: 70%;
+    margin-left: 2%;
     margin-bottom: 5%;
+    margin-top: 4%;
     
 
+}
+
+.cadaParceiro{
+    width: 25%;
 }
 
 .nomeParceiros{
@@ -92,15 +124,13 @@ h1{
 @media screen and (max-width: 768px) {
     .modulosEducacionais,
     .containerParceirosHome {
-        width: 90%; /* Reduz a largura em telas menores */
+        width: 90%; 
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .siglaParceiro{
+        font-size: small;
     }
 
-    .retangulo {
-        width: 50%; /* Reduz a largura em telas menores */
-        margin-left: 25%; /* Ajusta a margem em telas menores */
-    }
-
-    .nomeParceiros {
-        flex-direction: column; /* Empilha os parceiros verticalmente em telas menores */
-    }
 }

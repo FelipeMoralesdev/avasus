@@ -9,6 +9,7 @@ const renderizarEstrelas = (nota) => {
     const estrelas = [];
     const estrelasPreenchidas = Math.floor(nota);
     const decimalPart = nota % 1;
+    
   
     for (let i = 0; i < 5; i++) {
       let estiloEstrela = 'estrela';
@@ -26,7 +27,7 @@ const renderizarEstrelas = (nota) => {
   };
 
 
-const MinhaApp = () => {
+const API = () => {
     const [cursos, setCursos] = useState([]);
     const [opcaoClassificacao, setOpcaoClassificacao] = useState('avaliados'); 
   
@@ -96,8 +97,9 @@ const MinhaApp = () => {
       <ul>
             {cursos.map(curso => (
               <li className='listaCursos' key={curso.id}>
-             
+              <Link to={`/curso/${curso.id}`} className='linkModulo'>
                 <img className='img-quadrada' src={curso.capa} alt={`Capa do curso ${curso.titulo}`}  />
+              </Link>
                 <div className='infos'>
                     <div className='titulo'>{curso.titulo}{' '}</div>
                     <div className='parceiros'>{curso.parceiros}{' '}</div>
@@ -117,8 +119,6 @@ const MinhaApp = () => {
                 <Link to={`/curso/${curso.id}`} className='linkModulo'>
                   <div className='moduloAPI'>Ver módulo</div>
                 </Link>
-                
-             
               </li>
             ))}
       </ul>
@@ -126,4 +126,4 @@ const MinhaApp = () => {
   );
 };
 
-export default MinhaApp;
+export default API;

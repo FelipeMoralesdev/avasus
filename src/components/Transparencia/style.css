@@ -6,17 +6,14 @@
 .fundoDadosGerais{
     background-color: #F5F5F7;
     border-radius: 20px;
-    padding-top: 0.5%;
-    padding-bottom: 1%;
     padding: 2%;
-
+    margin-top: 2%;
 }
 
 .containerDadosGerais{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
 }
 
 .blocoDadosGerais{
@@ -55,21 +52,21 @@
     color: #2F2E41;
     font-weight:bolder;
     padding-top: 2%;
+    padding-bottom: 4%;
 }
 
 .grafico{
-    width: 70%;
-    margin-left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
     margin-top: 4%;
     margin-bottom: 4%;
-    
-    
 }
 
+
 .legendaCurso{
-    display: flex;
-    align-items: center;
-    padding-top: 10%;
+    margin-bottom: 1%;
     font-size: smaller;
 }
 
@@ -79,6 +76,7 @@
     background-color: #F5F5F7 ;
     border-radius: 20px;
     padding-top: 2%;
+    padding-bottom: 4%;
     
 }
 
@@ -86,7 +84,7 @@
     display: flex;
     margin-top: 3%;
     justify-content: space-around;
-    margin-bottom: 3%;
+    margin-bottom: 10%;
 }
 
 
@@ -98,6 +96,29 @@ h3{
     color: #D2202C
 }
 
+.bolinha{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 3%;
+    margin-left: 5%;
+    border: 1px solid black; 
+}
+
+.legendaMapa{
+    display: flex;
+    align-items: center;
+    padding-top: 2%;
+    font-size: smaller;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+.mapa{
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
 @media screen and (max-width: 768px) {
     .containerTransparencia{
         width: 90%;
@@ -105,7 +126,7 @@ h3{
     }
 
     .iconeDados{
-        width: 15%;
+        width: 10%;
     }
 
     .blocoDadosGerais{
@@ -123,9 +144,15 @@ h3{
    .usuarioCurso{
     width: 100%;
     align-items: center;
+    margin-bottom: 5%;
+
    }
 
    .usuarioEstado{
     width: 100%;
    }
+
+   .iconeDados{
+    width: 15%;
+    }
   }

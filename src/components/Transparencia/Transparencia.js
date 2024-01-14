@@ -37,7 +37,7 @@ const Transparencia = () => {
 
   return (
     <div className="containerTransparencia">
-      <div className="cabecalho">Início / Transparência </div>
+      <div className="cabecalho">Início <b>/ Transparência </b></div>
       <h1>Transparência</h1>
       {dadosTransparencia && (
         <div>
@@ -103,40 +103,57 @@ const Transparencia = () => {
                   {dadosTransparencia.transparecia.dados_gerais.investimento_medio_aluno}
                 </div>
               </div>
-
-
             </div>
           </div>
 
           <div className="containerInferior">
             <div className="usuarioCurso">
                 <h3>Usuários por Curso</h3>
-                <div className="grafico">
-                    <Grafico/>
-                </div>
-                
-                {dadosTransparencia.transparecia.usuarios_por_curso.map((curso, index) => (
-                    <div className="legendaCurso" key={curso.curso} style={{ display: 'flex', alignItems: 'center', paddingTop: '2%' }}>
-                    <div className="bolinha"
-                    style={{
-                        width: '15px',
-                        height: '15px',
-                        borderRadius: '50%',
-                        backgroundColor: cores[index % cores.length],
-                        marginRight: '3%',
-                        marginLeft: '5%',
-                        border: '1px solid black'
-                    }}
-                    ></div>
-                    {curso.curso}: {Number(curso.usuarios).toLocaleString()}
-                    </div>
-            ))}
+
+                  <div className="grafico">
+                      <Grafico/>
+                  </div>
+                  {dadosTransparencia.transparecia.usuarios_por_curso.map((curso, index) => (
+                      <div className="legendaCurso" key={curso.curso} style={{ display: 'flex', alignItems: 'center', paddingTop: '2%' }}>
+                      <div className="bolinha" style={{backgroundColor: cores[index % cores.length]}}></div>
+                      {curso.curso}: {Number(curso.usuarios).toLocaleString()}
+                      </div>
+                    ))}
+
             </div>
             <div className="usuarioEstado">
                     <h3>Usuários por Estado</h3>
-                    <Mapa/>
+                      <div className="mapa">
+                        <Mapa />
+                      </div>
+
+                        <div className="legendaMapa">
+                          <div className="bolinha" style={{backgroundColor: '#FFA6A6' }}></div>
+                          <div>Até 50 mil usuários</div>
+                        </div>
+
+                        <div className="legendaMapa">
+                          <div className="bolinha" style={{backgroundColor: '#FF7676' }}></div>
+                          <div>Até 100 mil usuários</div>
+                        </div>
+
+                        <div className="legendaMapa">
+                          <div className="bolinha" style={{backgroundColor: '#FF5656' }}></div>
+                          <div>Até 150 mil usuários</div>
+                        </div>
+
+                        <div className="legendaMapa">
+                          <div className="bolinha" style={{backgroundColor: '#FF2E2E' }}></div>
+                          <div>Até 200 mil usuários</div>
+                        </div>
+
+                        <div className="legendaMapa">
+                          <div className="bolinha" style={{backgroundColor: '#FF0909' }}></div>
+                          <div>Mais de 200 mil usuários</div>
+                        </div>
+
             </div>
-        </div>
+          </div>
         </div>
       )}
     </div>

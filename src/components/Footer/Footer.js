@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="faixa vermelha">
-        <p>Realização</p>
+        <div>Realização</div>
         <div >
           <img className="logos" src={logo1} alt="Logo 1" />
           <img className="logos" src={logo2} alt="Logo 2" />
@@ -23,8 +23,8 @@ const Footer = () => {
           <p className='laisFaixaCinza'>Laboratório de Inovação Tecnológica em Saúde</p>
         </div>
 
-        <div className="bloco">
-          <h6>Links Úteis</h6>
+        <div className="blocoLinks">
+          <div className='titulo1'>Links Úteis</div>
 
             <div>Início</div>
             <div>Sobre Nós</div>
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
 
         <div className="blocoRedes">
-          <h7>Redes Sociais</h7>
+          <div className='titulo2'>Redes Sociais</div>
           <div className="redesSociais">
             <img src={social1} alt="Redes Sociais" className='logoSociais'/>
             <img src={social2} alt="Redes Sociais" className='logoSociais'/>

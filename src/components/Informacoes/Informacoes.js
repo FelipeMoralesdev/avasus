@@ -97,7 +97,7 @@ const Informacoes = () => {
 
                     <div className="overlay"></div>
                         <div className="conteudo-informacoes">
-                        <div className="infosCapaSecoes">Início / Cursos / Módulos / {curso.titulo}</div>
+                        <div className="infosCapaSecoes">Início / Cursos / Módulos <b> / {curso.titulo}</b></div>
                         <div className="infosCapaTitulo">{curso.titulo}</div>
                         <div className="infosCapaParceiros">{curso.parceiros} </div>
                     </div>
@@ -136,27 +136,27 @@ const Informacoes = () => {
                     {" avaliações)"}
                   </div>
                 </div>
-                <h2>Sobre o Curso</h2>
+                <h5>Sobre o Curso</h5>
                 <div className="informacoesCurso">{curso.sobre}
-                    <h2>Objetivos</h2>
+                    <h5>Objetivos</h5>
 
-                    <h3>Objetivo Geral</h3>
+                    <h6>Objetivo Geral</h6>
                     {curso.objetivo_geral}
                     {curso.objetivo_especifico && (
                     <div>
-                        <h3>Objetivos Específicos</h3>
+                        <h6>Objetivos Específicos</h6>
                         <p>{curso.objetivo_especifico}</p>
                     </div>
                     )}
                     {curso.recursos_educacionais && (
                     <div>
-                        <h3>Recursos Educacionais</h3>
+                        <h5>Recursos Educacionais</h5>
                         <p>{curso.recursos_educacionais}</p>
                     </div>
                     )}
-                    {curso.conteudo && curso.conteudo.length > 0 && (
+                    {curso.conteudo && curso.conteudo.length > 0 && curso.conteudo.some(item => item !== null)  && (
                     <div>
-                        <h2>Conteúdo</h2>
+                        <h5>Conteúdo</h5>
                         <ul>
                         {curso.conteudo.map((item, index) => (
                             <li key={index}>{item}</li>
@@ -165,7 +165,7 @@ const Informacoes = () => {
                     </div>
                     )}
                     <div>
-                    <h2>Créditos</h2>
+                    <h5>Créditos</h5>
                     <div className="creditos-container">
                         {curso.creditos.map((credito, index) => (
                         <div key={index} className="credito-item">

@@ -1,6 +1,9 @@
 .containerInfos{
     width: 70%;
     margin-left: 15%;
+    margin-top: 3%;
+    
+
 
 }
 .infosCapaTitulo{
@@ -15,7 +18,7 @@
 }
 
 .infosCapaParceiros{
-    font-size: medium;
+    font-size: x-large;
 }
 
 
@@ -41,11 +44,12 @@
     height: 100%;
     object-fit: cover;
     object-position: 20% 10%;
+    
   }
 
   .conteudo-informacoes {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2; 
@@ -61,7 +65,7 @@
     width: 100%;
     font-size: medium;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     font-weight: bold;
 }
@@ -69,14 +73,16 @@
 .creditos-container {
     display: flex;
     justify-content: space-between; 
+    align-items: baseline;
   }
   
   .credito-item {
     text-align: center;
+    width: 20%;
   }
   
   .credito-item img {
-    width: 100px; 
+    width: 100%; 
     height: auto;
   }
 
@@ -90,12 +96,18 @@
 
   .informacoesCurso{
     text-align: justify;
+    line-height: 1;
   }
 
-h2{
+h5{
     text-align: center;
-    color: #F6303F;
+    margin-top: 3% !important;
+    margin-bottom: 1%;
     font-weight: bold;
+}
+
+h6{
+  margin-top: 2% !important;
 }
 
 h3{
@@ -113,7 +125,47 @@ h3{
     flex-wrap: wrap;
   }
 
-  .creditos-container{
-    flex-wrap: wrap;
+  .credito-item{
+    width: 25%;
   }
+}
+
+@media screen and (max-width: 425px) {
+  .conteudo-informacoes{
+    width: 90%;
+  }
+
+  .infosCapaTitulo{
+    font-size: large;
+    padding-bottom: 2%;
+    font-weight: bold;
+}
+.infosCapaSecoes{
+    font-size: smaller;
+    padding-bottom: 4%;
+}
+
+.creditos-container{
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.infosCapaParceiros{
+    font-size: medium;
+}
+
+.credito-item {
+  width: 40%;
+  
+}
+
+}
+
+@media screen and (max-width: 320px) {
+
+  .infoCardInfo{
+    font-size: small;
+  }
+
 }

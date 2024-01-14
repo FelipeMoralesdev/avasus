@@ -13,7 +13,7 @@ const Modulos = () => {
     const [cursos, setCursos] = useState([]);
     const [categorias, setCategorias] = useState([]);
     const [categoriaSelecionada, setCategoriaSelecionada] = useState('');
-    const [paginaAtual, setPaginaAtual] = useState(1); // Estado para acompanhar a página atual
+    const [paginaAtual, setPaginaAtual] = useState(1); 
     const cursosPorPagina = 6;
     
     useEffect(() => {
@@ -98,15 +98,16 @@ const Modulos = () => {
 
   return (
     <div className='containerModulos'>
-        <div className='cabecalho'>Início / Cursos / Módulos </div>
+        <div className='cabecalho'>Início / Cursos <b> / Módulos</b> </div>
         <h1>Módulos Educacionais</h1>
         <div className='containerCategorias'>
             {categorias.map((categoria, index) => (
-            <button key={index} onClick={() => setCategoriaSelecionada(categoria)} className='bttnModulos'>
+            <button key={index} onClick={() => setCategoriaSelecionada(categoria)} 
+             className={`bttnModulos ${categoria === categoriaSelecionada ? 'selecionada' : ''}`}>
                 {categoria}
             </button>
             ))}
-            <button onClick={() => setCategoriaSelecionada('')} className='bttnModulos'>Todas as Categorias</button>
+            <button onClick={() => setCategoriaSelecionada('')} className={`bttnModulos ${!categoriaSelecionada ? 'selecionada' : ''}`}>Todas as Categorias</button>
         </div>
         <div className='resultados'>
             <span>{obterCursosDaPaginaAtual().length} de {filtrarCursosPorCategoria().length} resultados</span>
@@ -115,7 +116,9 @@ const Modulos = () => {
         <ul className='containerCard'>
             {obterCursosDaPaginaAtual().map(curso => (
             <li className='cardCursos' key={curso.id}>
+              <Link to={`/curso/${curso.id}`} className='verCurso'>
                 <img className='capaCard' src={curso.capa} alt={`Capa do curso ${curso.titulo}`}  />
+              </Link>
                 <div>
                     <div className='tituloCard'>{curso.titulo}{' '}</div>
                     <div className='parceirosCard'>{curso.parceiros}{' '}</div>
@@ -129,7 +132,7 @@ const Modulos = () => {
                     <div className='infoCard'>{curso.avaliacao.toString().replace('.', ',')}{' '}</div>
                 </div>
                 <div className='resumoCard'>{limitarPalavras(curso.sobre, 27)}</div>
-                <Link to={`/curso/${curso.id}`}>
+                <Link to={`/curso/${curso.id}`} className='verCurso'>
                     Ver Curso
                 </Link>
 
@@ -138,13 +141,60 @@ const Modulos = () => {
         </ul>
     </div>
     <div>
-        <span>Página {paginaAtual} de {calcularNumeroDePaginas()}</span>
-        {Array.from({ length: calcularNumeroDePaginas() }).map((_, index) => (
-          <button key={index} onClick={() => handleTrocarPagina(index + 1)} className='bttnPag'>
-            {index + 1}
-          </button>
-        ))}
-      </div>
+      {Array.from({ length: calcularNumeroDePaginas() }).map((_, index) => {
+        const pagina = index + 1;
+        
+        if (pagina === 1) {
+          return (
+            <button key={index} onClick={() => handleTrocarPagina(pagina)}  className={`bttnPag ${pagina === paginaAtual ? 'paginaAtual' : ''} primeiroBotao`}>
+              {pagina}
+            </button>
+          );
+        }
+
+        if (pagina === paginaAtual - 2) {
+          return (
+            <button key={`ellipsis-before-${pagina}`} className={`bttnPag ${pagina === paginaAtual ? 'paginaAtual' : ''}`}>
+              {"..."}
+            </button>
+          );
+        }
+
+        if (pagina >= paginaAtual - 1 && pagina <= paginaAtual + 1) {
+          return (
+            <button key={index} onClick={() => handleTrocarPagina(pagina)} className={`bttnPag ${pagina === paginaAtual ? 'paginaAtual' : ''}`}>
+              {pagina}
+            </button>
+          );
+        }
+
+        if (pagina === paginaAtual + 2) {
+          return (
+            <button key={`ellipsis-after-${pagina}`} className={`bttnPag ${pagina === paginaAtual ? 'paginaAtual' : ''}`}>
+              {"..."}
+            </button>
+          );
+        }
+
+        if (pagina === calcularNumeroDePaginas()) {
+          return (
+            <button key={index} onClick={() => handleTrocarPagina(calcularNumeroDePaginas())} className={`bttnPag ${pagina === paginaAtual ? 'paginaAtual' : ''}`}>
+              {calcularNumeroDePaginas()}
+            </button>
+          );
+        }
+
+        return null;
+      })}
+
+
+      {paginaAtual < calcularNumeroDePaginas() && (
+    <button onClick={() => handleTrocarPagina(paginaAtual + 1)} className='bttnPag ultimoBotao'>
+      {'Próximo >'}
+    </button>
+  )}
+
+    </div>
 
     </div>
   );
