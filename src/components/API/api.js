@@ -104,11 +104,11 @@ const API = () => {
                     <div className='titulo'>{curso.titulo}{' '}</div>
                     <div className='parceiros'>{curso.parceiros}{' '}</div>
                 </div>
-                <div>
+                <div className='formatarCelular'>
                   <img src={iconeUsuarios} alt={'Icone Usuario'} className='iconeUsuario' />
                   {Number(curso.matriculados).toLocaleString()}{' '}
                 </div>
-                <div>
+                <div className='formatarCelular'>
                   <img src={iconeTempo} alt={'Icone Tempo'} className='icone' />
                   {curso.duracao}{' '}
                 </div>

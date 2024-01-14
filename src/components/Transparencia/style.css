@@ -155,4 +155,26 @@ h3{
    .iconeDados{
     width: 15%;
     }
+
+    .tituloBlocos{
+        height: 40%;
+    }
+
+
   }
+
+  @media screen and (max-width: 320px) {
+    .formatarDado{
+        font-size: small;
+        margin-top: 4px;
+        text-align: justify;
+    }
+
+    .blocoDadosGerais{
+        width: 40%;
+    }
+
+    .legendaCurso, .legendaMapa{
+        font-size: x-small;
+    }
+   }

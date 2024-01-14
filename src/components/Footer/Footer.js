@@ -37,7 +37,7 @@ const Footer = () => {
         <div className="blocoRedes">
           <div className='titulo2'>Redes Sociais</div>
           <div className="redesSociais">
-            <img src={social1} alt="Redes Sociais" className='logoSociais'/>
+            <img src={social1} alt="Redes Sociais" className='logoSociais f'/>
             <img src={social2} alt="Redes Sociais" className='logoSociais'/>
             <img src={social3} alt="Redes Sociais" className='logoSociais'/>
           </div>

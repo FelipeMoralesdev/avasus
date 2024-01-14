@@ -91,7 +91,6 @@ h1{
 
 .containerParceirosHome{
     width: 70%;
-    margin-left: 2%;
     margin-bottom: 5%;
     margin-top: 4%;
     
@@ -99,7 +98,7 @@ h1{
 }
 
 .cadaParceiro{
-    width: 25%;
+    width: 24%;
 }
 
 .nomeParceiros{
@@ -107,6 +106,8 @@ h1{
     background: #F5F5F7;
     border-radius: 20px;
     padding: 2%;
+    margin-left: 2%;
+    justify-content: space-between;
 }
 
 .siglaParceiro{
@@ -132,5 +133,14 @@ h1{
     .siglaParceiro{
         font-size: small;
     }
+
+    .nomeParceiros{
+        flex-direction: column;
+      }
+
+      .cadaParceiro{
+        width: 100%;
+        margin-top: 5px;
+      }
 
 }

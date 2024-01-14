@@ -121,6 +121,10 @@
     margin-top: 50%;
   }
 
+  .logoSociais.f{
+    margin-left: 7px;
+  }
+
   .logoMenor{
     width: 60%;
   }
@@ -132,6 +136,10 @@
 
   .titulo1{
     font-size: medium;
+  }
+
+  .titulo2{
+    margin-top: 5px;
   }
 
 

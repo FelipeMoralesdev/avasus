@@ -1,6 +1,4 @@
-ul{
-  margin: 0 !important;
-}
+
 .classificacoes{
   display: flex;
   width: 100%;
@@ -185,14 +183,12 @@ ul{
 
   .iconeUsuario{
     width: 25px;
-    margin-right: 5px;
-   
   }
 
   .icone{
     height: 20px;
     width: 20px;
-    margin-right: 14px;
+    margin-left: 3px;
   }
 
 
@@ -214,5 +210,14 @@ ul{
   .titulo, .parceiros{
   text-align: center;
   }
+
+  .formatarCelular{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+  }
+
+  
 
 }
